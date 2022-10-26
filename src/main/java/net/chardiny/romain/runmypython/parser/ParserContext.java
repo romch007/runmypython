@@ -1,6 +1,6 @@
-package net.chardiny.romain.parser;
+package net.chardiny.romain.runmypython.parser;
 
-import net.chardiny.romain.lexer.Token;
+import net.chardiny.romain.runmypython.lexer.Token;
 
 import java.util.List;
 

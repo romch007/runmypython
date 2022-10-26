@@ -1,4 +1,4 @@
-package net.chardiny.romain.lexer;
+package net.chardiny.romain.runmypython.lexer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

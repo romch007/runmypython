@@ -1,8 +1,9 @@
-package net.chardiny.romain.lexer;
+package net.chardiny.romain.runmypython.lexer;
 
 public enum TokenType {
     EQUAL,
     STRING_LITERAL,
+    NUMBER_LITERAL,
     OPEN_PARENTHESIS,
     CLOSE_PARENTHESIS,
     IDENTIFIER,

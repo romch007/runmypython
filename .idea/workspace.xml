@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6efe25f-4d17-4655-a995-804cdcdcabd9" name="Changes" comment="convert some classes to record">
+    <list default="true" id="b6efe25f-4d17-4655-a995-804cdcdcabd9" name="Changes" comment="upgrade dependencies">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/ast/VariableName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/interpreter/StackContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/interpreter/UndefinedReferenceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/net/chardiny/romain/runmypython/interpreter/StackContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/ast/Expression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/ast/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/VariableAssignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/ast/VariableAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/VariableName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/lexer/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/TokenType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/lexer/TokenType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/parser/InvalidTokenException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/parser/InvalidTokenException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/parser/ParserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/runmypython/parser/ParserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/chardiny/romain/lexer/LexerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/chardiny/romain/runmypython/lexer/LexerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +57,6 @@
                 <item name="RunMyPython" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RunMyPython" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -84,24 +95,10 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.chardiny.romain.Main" />
-      <module name="RunMyPython.main" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\romai\IdeaProjects\RunMyPython\examples\basic.py" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.chardiny.romain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.RunMyPython [build]">
     <configuration name="LexerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -116,29 +113,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;net.chardiny.romain.lexer.LexerTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LexerTest.shouldLexBasicStuff" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;net.chardiny.romain.lexer.LexerTest.shouldLexBasicStuff&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,18 +143,87 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="RunMyPython [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StackContextTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.chardiny.romain.interpreter.StackContextTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StackContextTest.shouldFindVariableInStackFrames" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;net.chardiny.romain.interpreter.StackContextTest.shouldFindVariableInStackFrames&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.LexerTest" />
-      <item itemvalue="Gradle.LexerTest.shouldLexBasicStuff" />
       <item itemvalue="Gradle.RunMyPython [build]" />
+      <item itemvalue="Gradle.RunMyPython [jar]" />
+      <item itemvalue="Gradle.StackContextTest" />
+      <item itemvalue="Gradle.StackContextTest.shouldFindVariableInStackFrames" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LexerTest" />
-        <item itemvalue="Gradle.LexerTest.shouldLexBasicStuff" />
         <item itemvalue="Gradle.RunMyPython [build]" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.StackContextTest" />
+        <item itemvalue="Gradle.StackContextTest.shouldFindVariableInStackFrames" />
+        <item itemvalue="Gradle.RunMyPython [jar]" />
+        <item itemvalue="Gradle.LexerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +236,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666801806045</updated>
       <workItem from="1666801815236" duration="169000" />
-      <workItem from="1666802003704" duration="9000000" />
+      <workItem from="1666802003704" duration="12616000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666807492267</created>
@@ -223,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666810988381</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="upgrade dependencies">
+      <created>1666811029886</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666811029886</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +295,8 @@
     <MESSAGE value="add license" />
     <MESSAGE value="add basic parsing (incomplete)" />
     <MESSAGE value="convert some classes to record" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert some classes to record" />
+    <MESSAGE value="upgrade dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade dependencies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,5 +306,9 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

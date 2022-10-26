@@ -1,10 +1,10 @@
-package net.chardiny.romain.parser;
+package net.chardiny.romain.runmypython.parser;
 
-import net.chardiny.romain.ast.Node;
-import net.chardiny.romain.ast.VariableAssignment;
-import net.chardiny.romain.ast.VariableName;
-import net.chardiny.romain.lexer.Token;
-import net.chardiny.romain.lexer.TokenType;
+import net.chardiny.romain.runmypython.ast.Node;
+import net.chardiny.romain.runmypython.ast.VariableAssignment;
+import net.chardiny.romain.runmypython.ast.VariableName;
+import net.chardiny.romain.runmypython.lexer.Token;
+import net.chardiny.romain.runmypython.lexer.TokenType;
 
 import java.util.*;
 
@@ -39,7 +39,7 @@ public class Parser {
 
     private Token expect(Token token, TokenType tokenType) throws InvalidTokenException {
         if (token.getType() != tokenType)
-            throw new InvalidTokenException(token.getType(), tokenType);
+            throw new InvalidTokenException(tokenType, token.getType());
         return token;
     }
 

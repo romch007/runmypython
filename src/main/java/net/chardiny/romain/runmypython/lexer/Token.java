@@ -1,4 +1,4 @@
-package net.chardiny.romain.lexer;
+package net.chardiny.romain.runmypython.lexer;
 
 public class Token {
     private TokenType type;

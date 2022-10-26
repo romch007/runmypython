@@ -1,10 +1,10 @@
-package net.chardiny.romain;
+package net.chardiny.romain.runmypython;
 
-import net.chardiny.romain.ast.Node;
-import net.chardiny.romain.lexer.Lexer;
-import net.chardiny.romain.lexer.Token;
-import net.chardiny.romain.parser.InvalidTokenException;
-import net.chardiny.romain.parser.Parser;
+import net.chardiny.romain.runmypython.ast.Node;
+import net.chardiny.romain.runmypython.lexer.Lexer;
+import net.chardiny.romain.runmypython.lexer.Token;
+import net.chardiny.romain.runmypython.parser.InvalidTokenException;
+import net.chardiny.romain.runmypython.parser.Parser;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -38,9 +38,18 @@ public class Main {
         Parser parser = new Parser(tokens);
         List<Node> topNodes = null;
         try {
-           topNodes = parser.parse();
+            topNodes = parser.parse();
         } catch (InvalidTokenException e) {
             System.out.println("invalid token: " + e.getMessage());
+            return;
         }
+
+        System.out.println("AST:");
+        for (Node node : topNodes)
+            System.out.println(node.printDebug());
+
+        System.out.println("EXECUTION:");
+        for (Node node : topNodes)
+            node.execute();
     }
 }
