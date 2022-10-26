@@ -1,4 +1,4 @@
-package net.chardiny.romain.runmypython.lexer;
+package net.chardiny.romain.runmypython.lexer.tokens;
 
 public enum TokenType {
     EQUAL,

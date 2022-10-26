@@ -2,7 +2,7 @@ package net.chardiny.romain.runmypython;
 
 import net.chardiny.romain.runmypython.ast.Node;
 import net.chardiny.romain.runmypython.lexer.Lexer;
-import net.chardiny.romain.runmypython.lexer.Token;
+import net.chardiny.romain.runmypython.lexer.tokens.Token;
 import net.chardiny.romain.runmypython.parser.InvalidTokenException;
 import net.chardiny.romain.runmypython.parser.Parser;
 

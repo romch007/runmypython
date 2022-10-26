@@ -1,10 +1,10 @@
 package net.chardiny.romain.runmypython.parser;
 
-import net.chardiny.romain.runmypython.ast.Node;
-import net.chardiny.romain.runmypython.ast.VariableAssignment;
-import net.chardiny.romain.runmypython.ast.VariableName;
-import net.chardiny.romain.runmypython.lexer.Token;
-import net.chardiny.romain.runmypython.lexer.TokenType;
+import net.chardiny.romain.runmypython.ast.*;
+import net.chardiny.romain.runmypython.lexer.tokens.IntegerTokenValue;
+import net.chardiny.romain.runmypython.lexer.tokens.StringTokenValue;
+import net.chardiny.romain.runmypython.lexer.tokens.Token;
+import net.chardiny.romain.runmypython.lexer.tokens.TokenType;
 
 import java.util.*;
 
@@ -44,7 +44,7 @@ public class Parser {
     }
 
     private Token expect(TokenType tokenType) throws InvalidTokenException {
-        Token token = this.peek(1);
+        Token token = this.peek();
         this.expect(token, tokenType);
         return token;
     }
@@ -62,13 +62,29 @@ public class Parser {
     }
 
     private VariableAssignment parseVariableAssignment() throws InvalidTokenException {
-        Token lvalueToken = this.expect(this.advance(), TokenType.IDENTIFIER);
+        VariableName lvalue = this.parseVariableName();
         this.expect(this.advance(), TokenType.EQUAL);
-        Token rvalueToken = this.expect(this.advance(), TokenType.IDENTIFIER);
-
-        VariableName lvalue = new VariableName(lvalueToken.getValue());
-        VariableName rvalue = new VariableName(rvalueToken.getValue());
+        Expression rvalue = this.parseExpression();
 
         return new VariableAssignment(lvalue, rvalue);
+    }
+
+    private Expression parseExpression() throws InvalidTokenException {
+        Token token = this.peek();
+        return switch (token.getType()) {
+            case IDENTIFIER -> this.parseVariableName();
+            case NUMBER_LITERAL -> this.parseNumberLiteral();
+            default -> throw new InvalidTokenException("invalid expression");
+        };
+    }
+
+    private VariableName parseVariableName() throws InvalidTokenException {
+        Token token = this.expect(this.advance(), TokenType.IDENTIFIER);
+        return new VariableName(((StringTokenValue) token.getValue()).getValue());
+    }
+
+    private NumberLiteral parseNumberLiteral() throws InvalidTokenException {
+       Token token = this.expect(this.advance(), TokenType.NUMBER_LITERAL);
+       return new NumberLiteral(((IntegerTokenValue) token.getValue()).getValue());
     }
 }

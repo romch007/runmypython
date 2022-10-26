@@ -9,6 +9,6 @@ public record VariableAssignment(VariableName lvalue, Expression rvalue) impleme
 
     @Override
     public String printDebug() {
-        return String.format("VariableAssignment(%s = %s)", this.lvalue.printDebug(), this.rvalue.printDebug());
+        return String.format("VariableAssignment(\n\t%s\n\tassigned to\n\t%s\n)", this.lvalue.printDebug(), this.rvalue.printDebug());
     }
 }

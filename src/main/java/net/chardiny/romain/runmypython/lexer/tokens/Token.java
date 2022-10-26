@@ -1,8 +1,8 @@
-package net.chardiny.romain.runmypython.lexer;
+package net.chardiny.romain.runmypython.lexer.tokens;
 
 public class Token {
     private TokenType type;
-    private String value;
+    private TokenValue value;
 
     public Token() {
     }
@@ -15,11 +15,11 @@ public class Token {
         this.type = type;
     }
 
-    public String getValue() {
+    public TokenValue getValue() {
         return this.value;
     }
 
-    public void setValue(String value) {
+    public void setValue(TokenValue value) {
         this.value = value;
     }
 }

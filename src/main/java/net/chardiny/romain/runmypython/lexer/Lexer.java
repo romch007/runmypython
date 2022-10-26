@@ -1,5 +1,10 @@
 package net.chardiny.romain.runmypython.lexer;
 
+import net.chardiny.romain.runmypython.lexer.tokens.IntegerTokenValue;
+import net.chardiny.romain.runmypython.lexer.tokens.StringTokenValue;
+import net.chardiny.romain.runmypython.lexer.tokens.Token;
+import net.chardiny.romain.runmypython.lexer.tokens.TokenType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,7 +106,7 @@ public class Lexer {
                 case 'V':
                 case 'W':
                 case 'X':
-                case 'Y':
+                case 'Y': {
                     int nameStart = this.currentPosition;
 
                     while (this.currentPosition + 1 < this.input.length() && Character.isAlphabetic(this.peek()))
@@ -109,9 +114,28 @@ public class Lexer {
 
                     String name = this.input.substring(nameStart, this.currentPosition + 1);
                     token.setType(TokenType.IDENTIFIER);
-                    token.setValue(name);
+                    token.setValue(new StringTokenValue(name));
                     break;
-                // Store name
+                }
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9': {
+                    int nameStart = this.currentPosition;
+
+                    while (this.currentPosition + 1 < this.input.length() && Character.isDigit(this.peek()))
+                        this.currentPosition++;
+
+                    int result = Integer.parseInt(this.input.substring(nameStart, this.currentPosition + 1));
+                    token.setType(TokenType.NUMBER_LITERAL);
+                    token.setValue(new IntegerTokenValue(result));
+                }
             }
 
             if (token.getType() != null)
