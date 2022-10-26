@@ -6,7 +6,7 @@ import java.util.List;
 public class Lexer {
     private int currentPosition = 0;
     private int lineStartPosition = 0;
-    private String input;
+    private final String input;
 
     public Lexer(String input) {
         this.input = input;
@@ -102,12 +102,12 @@ public class Lexer {
                 case 'W':
                 case 'X':
                 case 'Y':
-                    int nameStart = 0;
+                    int nameStart = this.currentPosition;
 
                     while (this.currentPosition + 1 < this.input.length() && Character.isAlphabetic(this.peek()))
                         this.currentPosition++;
 
-                    String name = this.input.substring(this.currentPosition, this.currentPosition + nameStart + 1);
+                    String name = this.input.substring(nameStart, this.currentPosition + 1);
                     token.setType(TokenType.IDENTIFIER);
                     token.setValue(name);
                     break;

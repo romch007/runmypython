@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6efe25f-4d17-4655-a995-804cdcdcabd9" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    <list default="true" id="b6efe25f-4d17-4655-a995-804cdcdcabd9" name="Changes" comment="add basic parsing (incomplete)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/Expression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/VariableAssignment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/ast/VariableName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/parser/InvalidTokenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/parser/ParserContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Token.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +68,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -86,7 +97,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.LexerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.chardiny.romain.Main" />
       <module name="RunMyPython.main" />
@@ -192,7 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1666801806045</updated>
       <workItem from="1666801815236" duration="169000" />
-      <workItem from="1666802003704" duration="5621000" />
+      <workItem from="1666802003704" duration="8777000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1666807492267</created>
@@ -201,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666807492267</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add license">
+      <created>1666807652760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666807652760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +238,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add license" />
+    <MESSAGE value="add basic parsing (incomplete)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic parsing (incomplete)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/chardiny/romain/lexer/Lexer.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="java-exception">
+          <condition expression="!(this instanceof java.lang.ClassNotFoundException)" language="JAVA" />
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
